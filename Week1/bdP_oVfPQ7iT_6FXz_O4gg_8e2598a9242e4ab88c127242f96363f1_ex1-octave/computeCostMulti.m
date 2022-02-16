@@ -14,7 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
-
+predict = X * theta;
+sqrError = (predict - y ).^2;
+J = 1/(2*m)* sum(sqrError);
 
 
 % =========================================================================

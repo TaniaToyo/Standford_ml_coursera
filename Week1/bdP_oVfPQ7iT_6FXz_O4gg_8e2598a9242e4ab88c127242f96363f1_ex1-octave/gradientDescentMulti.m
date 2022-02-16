@@ -18,7 +18,13 @@ for iter = 1:num_iters
     %
 
 
-
+   % This is used to find the predicted value with the theta
+    predictions =  X * theta;
+    %X' is used because multiplication of matrix is possible only
+    % for a m*n n*p matrics.
+    updates = X' * (predictions - y);
+    % theta = theta - alpha*(1/m) * derivative of cost function
+    theta = theta - alpha * (1/m) * updates;
 
 
 
